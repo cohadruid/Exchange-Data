@@ -44,10 +44,7 @@
     </style>
   </head>
 
-  <body>
-      <div class="slidecontainer">
-          <input type="range" min="2014" max="2015" value="2014" class="slider" id="yearRange">
-        </div>
+  
 
     <div id="map-holder"></div>
     <script type="text/javascript">
@@ -190,7 +187,7 @@
 
       // get map data
       d3.json(
-        "world.json",
+        "https://raw.githubusercontent.com/cohadruid/Exchange-Data/develop/ExchangeData/world.json",
         function(json) {
           //Bind data and create one path per GeoJSON feature
           countriesGroup = svg.append("g").attr("id", "map");
