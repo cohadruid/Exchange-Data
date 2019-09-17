@@ -262,7 +262,7 @@
             .attr("dx", 0)
             .attr("dy", 0)
             .text(function(d) {
-              return d.properties.exchange;
+              return d.properties.name + ": " + d.properties.exchange;
             })
             .call(getTextBox);
           // add a background rectangle the same size as the text
