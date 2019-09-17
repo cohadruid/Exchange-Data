@@ -262,6 +262,12 @@
             .attr("dx", 0)
             .attr("dy", 0)
             .text(function(d) {
+              if(d.properties.exchange == undefined) {
+                return d.properties.name + ": no exchange data";
+              }
+              else {
+                return d.properties.name + ": " + d.properties.exchange;
+              }
               return d.properties.name + ": " + d.properties.exchange;
             })
             .call(getTextBox);
