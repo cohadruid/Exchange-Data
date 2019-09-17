@@ -234,7 +234,7 @@
             .append("g")
             .attr("class", "countryLabel")
             .attr("id", function(d) {
-              return "countryLabel" + d.properties.exchange;
+              return "countryLabel" + d.properties.iso_a3;
             })
             .attr("transform", function(d) {
               return (
@@ -262,7 +262,7 @@
             .attr("dx", 0)
             .attr("dy", 0)
             .text(function(d) {
-              return d.properties.name;
+              return d.properties.exchange;
             })
             .call(getTextBox);
           // add a background rectangle the same size as the text
